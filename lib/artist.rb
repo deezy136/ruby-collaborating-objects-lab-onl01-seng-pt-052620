@@ -6,7 +6,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
-  
+    save
   end
 
   def self.all
@@ -35,9 +35,12 @@ class Artist
     songs.each { |song| puts song.name }
   end
 
-  
+  def save
+    @@all << self
+  end
 
   def songs
     @songs
   end
 end 
+ 15  lib/mp3_importer.rb 
