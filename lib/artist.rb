@@ -27,8 +27,11 @@ end
 
 def add_song(song)
   
-@songs << song 
-  
+  if song.artist == self.name 
+    @songs << song 
+  else 
+    " no songs "
+  end 
 end 
 
 
